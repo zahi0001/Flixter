@@ -23,12 +23,11 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
 
 ### App Walkthough GIF
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
-
 <img src="https://github.com/zahi0001/Flixter/blob/main/GIF%20Walkthrough%20Flixter.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+I faced problems when creating the MovieAdapter.kt class in Android Studio, but then I understood that I shoudl make sure that the class file shoudl be in the same directory as the MainActivity Class to be able to call the method within.
+I had a little trouble with finding the gif URL, but I found out I could easily do it without any conversion. Just by right clicking on the gif from the github repository and add ".gif" at the end.
 
 ### Open-source libraries used
 
