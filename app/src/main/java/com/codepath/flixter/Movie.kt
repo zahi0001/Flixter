@@ -1,13 +1,19 @@
 package com.codepath.flixter
 
+import android.os.Parcelable
+import kotlinx.parcelize.IgnoredOnParcel
+import kotlinx.parcelize.Parcelize
 import org.json.JSONArray
 
+@Parcelize
 data class Movie (
     val movieID: Int,
+    val voteAverage: Double,
     private val posterPath: String,
     val title: String,
     val overview: String,
-){
+): Parcelable {
+    @IgnoredOnParcel
     val posterImageUrl = "https://image.tmdb.org/t/p/w342/$posterPath"
     companion object{ //call methods in the movie class without having an instance
          fun fromJsonArray(movieJsonArray: JSONArray): List <Movie> {
@@ -17,6 +23,7 @@ data class Movie (
                  movies.add(
                      Movie(
                          movieJson.getInt("id"),
+                         movieJson.getDouble("vote_average"),
                          movieJson.getString("poster_path"),
                          movieJson.getString("title"),
                          movieJson.getString("overview")
